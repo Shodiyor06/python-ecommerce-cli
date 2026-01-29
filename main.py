@@ -1,0 +1,52 @@
+import json
+from interfaces.main_menu import main_menu, home_menu
+from services.database import DB
+from services.user_service import UserService
+from services.order_service import OrderService
+from services.product_service import ProductService
+
+def main():
+    user_service = UserService()
+    order_service = OrderService()
+    db = DB()
+    products = db.get_products()
+    product_service = ProductService(products)
+
+    while True:
+        home_menu()
+        choice = input("Tanlovingizni kiriting: ").strip()
+        if choice == '1':
+            user_service.create_user()
+        elif choice == '2':
+            user_service.login_user()
+            if user_service.logged_user:
+                while True:
+                    main_menu()
+                    user_choice = input("Tanlovingizni kiriting: ").strip()
+                    if user_choice == '1':
+                        product_service.print_products()
+                    elif user_choice == '2':
+                        order_service.save_orders()
+                    elif user_choice == '3':
+                        order_service.print_check()
+                    elif user_choice == '4':
+                        order_service.delete_order()
+                    elif user_choice == '5':
+                        order_service.create_order(
+                            user=user_service.logged_user,)
+                        order_service.print_check()
+                    elif user_choice == '0':
+                        print("Chiqish amalga oshirildi.")
+                        break
+                    else:
+                        print("Noto'g'ri tanlov. Qayta urinib ko'ring.")
+        elif choice == '0':
+            print("Dasturdan chiqish amalga oshirildi.")
+            break
+        else:
+            print("Noto'g'ri tanlov. Qayta urinib ko'ring.")
+
+
+
+if __name__ == "__main__":
+    main()
