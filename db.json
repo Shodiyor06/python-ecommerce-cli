@@ -55,5 +55,38 @@
             "product description": "24.1 MP sensor, 4K video, WiFi, profesional sifat"
         }
     ],
-    "orders": []
+    "orders": [
+        {
+            "id": 1,
+            "username": "shodi",
+            "total_price": 1500000,
+            "products": [
+                {
+                    "product id": 1,
+                    "product name": "Smartfon Samsung A12",
+                    "product category": "Elektronika",
+                    "product price": 1500000,
+                    "product sale": 10,
+                    "product stock": 25,
+                    "product description": "Yangi Samsung smartfoni, 64GB xotira, 6.5 dyuymli displey"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "username": "shodi",
+            "total_price": 2500000,
+            "products": [
+                {
+                    "product id": 4,
+                    "product name": "Smartwatch Apple Watch Series 7",
+                    "product category": "Aksesuarlar",
+                    "product price": 2500000,
+                    "product sale": 20,
+                    "product stock": 15,
+                    "product description": "AMOLED displey, sog'liq kuzatish, suv qarshiligi"
+                }
+            ]
+        }
+    ]
 }
