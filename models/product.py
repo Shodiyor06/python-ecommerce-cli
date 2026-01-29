@@ -16,17 +16,17 @@ class Product:
             "product price": self.price,
             "product sale": self.sale,
             "product stock": self.stock,
-            "product description": self.description
+            "product description": self.description,
         }
-    
+
     @classmethod
     def from_dict_p(cls, data):
         return cls(
-            id=data.get('product id'),
-            name=data.get('product name'),
-            category=data.get('product category'),
-            price=data.get('product price'),
-            sale=data.get('product sale'),
-            stock=data.get('product stock'),
-            description=data.get('product description')
+            id=data.get("product id"),
+            name=data.get("product name"),
+            category=data.get("product category"),
+            price=data.get("product price"),
+            sale=data.get("product sale"),
+            stock=data.get("product stock"),
+            description=data.get("product description"),
         )

@@ -1,5 +1,6 @@
 from uuid import uuid4
 
+
 class User:
     def __init__(self, id, username, password, first_name, last_name):
         self.id = id or str(uuid4())
@@ -14,14 +15,15 @@ class User:
             "username": self.username,
             "password": self.password,
             "first_name": self.first_name,
-            "last_name": self.last_name
-        }   
+            "last_name": self.last_name,
+        }
+
     @classmethod
     def create_user(cls, first_name, last_name, username, password):
         return cls(
             id=None,
-            username = username,
-            password = password,
-            first_name = first_name,
-            last_name = last_name,
+            username=username,
+            password=password,
+            first_name=first_name,
+            last_name=last_name,
         )

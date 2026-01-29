@@ -1,21 +1,17 @@
-import email
 from typing import List
 
 from models.user import User
-
-# from utils.utils import make_password
-from utils.validators import validate_name
-
 from services.database import DB
+from utils.validators import validate_name
 
 
 class UserService:
-    
+
     def __init__(self):
         self.logged_user = None
         self.db = DB()
         self.users: List[User] = []
-    
+
     def create_user(self):
         username = input("Foydalanuvchi nomini kiriting: ").strip().lower()
         first_name = input("Ismingizni kiriting: ").strip().capitalize()
@@ -48,12 +44,12 @@ class UserService:
 
         if user_data:
             self.logged_user = User.create_user(
-                username=user_data['username'],
-                password=user_data['password'],
-                first_name=user_data['first_name'],
-                last_name=user_data['last_name']
+                username=user_data["username"],
+                password=user_data["password"],
+                first_name=user_data["first_name"],
+                last_name=user_data["last_name"],
             )
-            self.logged_user.id = user_data['id']
+            self.logged_user.id = user_data["id"]
             print("Siz muvaffaqiyatli kirdingiz.")
         else:
             print("Bunda user mavjud emas.")
