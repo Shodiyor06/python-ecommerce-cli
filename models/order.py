@@ -1,5 +1,5 @@
 class Order:
-    def __init__(self, id, username, total_price, products):
+    def __init__(self, id, username, total_price):
 
         self.id = id
         self.username = username

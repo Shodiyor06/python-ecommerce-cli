@@ -1,5 +1,59 @@
 {
-    "users": [],
-    "products": [],
+    "users": [
+        {
+            "id": "06f533fe-9fab-4613-816f-9f269587073c",
+            "username": "shodi",
+            "password": "1234",
+            "first_name": "Sh",
+            "last_name": "Sh"
+        }
+    ],
+    "products": [
+        {
+            "product id": 1,
+            "product name": "Smartfon Samsung A12",
+            "product category": "Elektronika",
+            "product price": 1500000,
+            "product sale": 10,
+            "product stock": 25,
+            "product description": "Yangi Samsung smartfoni, 64GB xotira, 6.5 dyuymli displey"
+        },
+        {
+            "product id": 2,
+            "product name": "Noutbuk HP Pavilion",
+            "product category": "Kompyuterlar",
+            "product price": 4500000,
+            "product sale": 15,
+            "product stock": 10,
+            "product description": "Intel Core i5, 8GB RAM, 256GB SSD, Windows 11"
+        },
+        {
+            "product id": 3,
+            "product name": "Quloqchuv AirPods Pro",
+            "product category": "Audio",
+            "product price": 800000,
+            "product sale": 5,
+            "product stock": 50,
+            "product description": "Nol shovqin texnologiyasi, 30 soat quvvat, Bluetooth 5.0"
+        },
+        {
+            "product id": 4,
+            "product name": "Smartwatch Apple Watch Series 7",
+            "product category": "Aksesuarlar",
+            "product price": 2500000,
+            "product sale": 20,
+            "product stock": 15,
+            "product description": "AMOLED displey, sog'liq kuzatish, suv qarshiligi"
+        },
+        {
+            "product id": 5,
+            "product name": "Kamera Canon EOS M50",
+            "product category": "Foto-video",
+            "product price": 5000000,
+            "product sale": 12,
+            "product stock": 8,
+            "product description": "24.1 MP sensor, 4K video, WiFi, profesional sifat"
+        }
+    ],
     "orders": []
 }

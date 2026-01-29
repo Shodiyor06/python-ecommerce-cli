@@ -24,17 +24,19 @@ class UserService:
 
         if not validate_name(first_name):
             print("First Name xato kiritgansiz.")
+            return
         elif not validate_name(last_name):
             print("Last Name xato kiritgansiz.")
-            user = User.create_user(
-                username=username,
-                password=password,
-                first_name=first_name,
-                last_name=last_name,
-            )
-            self.db.create_user(user.to_dict())
+            return
 
-            print("Siz muvaffaqiyatli royxatdan otdingiz.")
+        user = User.create_user(
+            username=username,
+            password=password,
+            first_name=first_name,
+            last_name=last_name,
+        )
+        self.db.create_user(user.to_dict())
+        print("Siz muvaffaqiyatli royxatdan otdingiz.")
 
     def login_user(self):
         username = input("Foydalanuvchi nomini kiriting: ").strip().lower()
@@ -49,9 +51,9 @@ class UserService:
                 username=user_data['username'],
                 password=user_data['password'],
                 first_name=user_data['first_name'],
-                last_name=user_data['last_name'],
-                user_id=user_data['id'],
+                last_name=user_data['last_name']
             )
+            self.logged_user.id = user_data['id']
             print("Siz muvaffaqiyatli kirdingiz.")
         else:
             print("Bunda user mavjud emas.")

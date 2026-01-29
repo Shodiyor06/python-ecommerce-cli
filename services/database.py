@@ -18,7 +18,9 @@ class DB:
         with open(self.db_file, 'r') as f:
             self.data = json.loads(f.read())
 
-    def l
+    def load_data_product(self):
+        with open(self.db_file, 'r') as f:
+            self.data = json.loads(f.read())
     def save_data(self):
         with open(self.db_file, 'w') as f:
             f.write(json.dumps(self.data, indent=4))
